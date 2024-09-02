@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#app uni-view {
+    box-sizing: border-box;
+    border-radius: 8px;
+    max-width: 750px;
+    font-family: "Source Han Serif CN", "宋体", serif;
+    font-size: 16px;
+  }
+  
+  .fc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .fr {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .fs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fsb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .rotate-image img {
+    animation: rotate 2s linear infinite; /* 动画名称、持续时间、速度曲线、循环次数 */
+  }
+  
+  .bold{
+    font-weight: bold;
+  }

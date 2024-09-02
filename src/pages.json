@@ -1,0 +1,82 @@
+{
+  "pages": [
+    {
+      "path": "pages/person/person",
+      "style": {
+        "navigationBarTitleText": "个人中心"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/person/viewDetail/viewDetail",
+      "style": {
+        "navigationBarTitleText": "查看明细"
+      }
+    },
+    {
+      "path": "pages/spread/spread",
+      "style": {
+        "navigationBarTitleText": "推广"
+      }
+    },
+    {
+      "path": "pages/spread/payLink/payLink",
+      "style": {
+        "navigationBarTitleText": "套餐"
+      }
+    },
+    {
+      "path": "pages/spread/retail/retail",
+      "style": {
+        "navigationBarTitleText": "零售"
+      }
+    },
+    {
+      "path": "pages/order/order",
+      "style": {
+        "navigationBarTitleText": "订单"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "height": "60px",
+    "list": [
+      {
+        "pagePath": "pages/person/person",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "登录"
+      },
+      {
+        "pagePath": "pages/spread/payLink/payLink",
+        "text": "测试"
+      }
+    ]
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^my-(.*)": "@/components/my-$1/my-$1.vue",
+      "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+    }
+  }
+}
