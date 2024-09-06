@@ -1,11 +1,12 @@
-import request from "@/apis/request";
+import {
+  request
+} from "@/apis/request";
 
 /**
- * 登录
+ * topList
  * @param {topgrossingapplications} data
  */
-export const topList = ({ limit }: { limit: number }) => {
-
+export const topList = ({ limit }) => {
   return request({
     method: "get",
     url: `/rss/topgrossingapplications/limit=${limit}/json`,
@@ -15,14 +16,27 @@ export const topList = ({ limit }: { limit: number }) => {
 
 
 /**
-* 
+* freeList
 * @param {topfreeapplications} data
 */
-export const freeList = ({ limit }: { limit: number }) => {
-
+export const freeList = ({ limit }) => {
   return request({
     method: "get",
     url: `/rss/topfreeapplications/limit=${limit}/json`,
+    headers: { 'Content-Type': 'application/json' }
+  });
+};
+
+
+/**
+* freeList
+* @param {topfreeapplications} data
+*/
+export const lookup = (data) => {
+  return request({
+    method: "get",
+    url: `/lookup`,
+    data,
     headers: { 'Content-Type': 'application/json' }
   });
 };

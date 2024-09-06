@@ -5,6 +5,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   // 兼容小程序，将 : 替换成 __
   separator: '__',
+  important: true,
   theme: {
     // 
     extend: {

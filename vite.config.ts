@@ -17,6 +17,15 @@ export default defineConfig({
 	css: {
 		postcss: postcssConfig,
 	},
+	server: {
+		proxy: {
+			'/rss': {
+				target: 'https://itunes.apple.com/hk', // 目标服务器的地址
+				changeOrigin: true, // 是否更改请求头中的Origin字段
+				// rewrite: (path) => path.replace(/^\/api/, '') // 重写路径，例如将/api前缀去掉
+			}
+		}
+	},
 	plugins: [
 		uni(),
 		uvtw(),
