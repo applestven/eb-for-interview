@@ -22,7 +22,7 @@
         <view v-for="(item, index) in freeListRes" :key="index" class="ml-2 mt-2 pb-2 rounded-none" style="border-bottom:1px solid #EAEAEA" >
           <view class="flex">
             <view class="w-3 fc mr-2 text-[#999999]">{{index+1}}</view>
-            <image :src="item['link'][1]['attributes']['href']" class="w-[60px] h-[60px] rounded-lg"  :class="{ 'rounded-full': index % 2 === 1 }"></image> 
+            <image :class="{ 'rounded-full': index % 2 === 1 , 'rounded-lg': index % 2 === 0}" :src="item['link'][1]['attributes']['href']" class="w-[60px] h-[60px]"  ></image> 
             <view class="flex flex-col ml-2 justify-between flex-start">
               <view class="title">{{item['im:name']['label']}}</view>
               <view class="text-[12px] text-[#999999]">{{item['im:name']['label']}}</view>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref ,reactive ,onMounted ,toRaw } from 'vue'
+import { ref ,onMounted ,toRaw } from 'vue'
 import { topList , freeList } from "@/apis"
 
 const keyword = ref('');  
@@ -74,7 +74,7 @@ const initList = async () => {
   freeListRes.value = res2.feed.entry;
   status.value = 'loadmore';
 }
-  
+
 const freelimit = ref(1)
 
 const scrolltolower = async() =>{
@@ -93,19 +93,5 @@ const scrolltolower = async() =>{
 </script>
 
 <style scoped>
-.uv-scroll-list__scroll-view__content {
-  /* 隐藏滚动条 */
-  -ms-overflow-style: none;  /* IE 和 Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-.uv-scroll-list__scroll-view__content::-webkit-scrollbar {
-  display: none; /* 隐藏 WebKit 浏览器的滚动条 */
-}
-
-/* 保留滚动功能 */
-.uv-scroll-list__scroll-view__content {
-  overflow: auto;
-}
 
 </style>
