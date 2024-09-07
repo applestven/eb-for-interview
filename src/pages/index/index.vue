@@ -74,7 +74,7 @@ const initList = async () => {
   freeListRes.value = res2.feed.entry;
   status.value = 'loadmore';
 }
-
+  
 const freelimit = ref(1)
 
 const scrolltolower = async() =>{
